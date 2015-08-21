@@ -1,0 +1,42 @@
+& > footer {
+	color: $color-nil-white;
+	padding-top: $spacing-unit;
+	padding-bottom: $spacing-unit;
+	
+	.social {
+		padding-bottom: $spacing-unit;
+		
+		a {
+		    vertical-align: center;
+		    text-align: center;
+		    line-height: 2;
+		    
+		    color: $color-nil-white;
+		    &:hover {
+			    color: white;
+		    }
+		    
+		    font-size: 34px !important;
+				
+			&:hover {
+			    bottom: 2px;
+			    text-decoration: none;
+			
+			    -webkit-transition: all .1s linear;
+			            transition: all .1s linear;
+			}
+			
+			&.twitter:hover { color: #55acee; }
+		
+			&.facebook:hover { color: #3b5998; }
+			
+			&.flickr:hover { color: #ff0084; }
+			
+			&.instagram:hover { color: rgba(98, 67, 53, 1); }
+			
+			&.tumblr:hover { color: #35465D }
+			
+			&.youtube:hover{ color: #CF3427; }
+		}
+	}
+}

@@ -1,0 +1,34 @@
+& > section {
+	h2 {
+		color: $color-heading-gray;
+		span {
+			padding-right: 100px;
+		}
+		small {
+			float: right;
+			padding-top: 18px;
+			font-size: 12px;
+			text-transform: uppercase;
+		}
+	}
+	a {
+		&:hover {
+			text-decoration: none;
+			color: $color-brand-blue;
+		}
+	}
+	article {
+		margin-top: 20px;
+		
+		&:last-child {
+			margin-bottom: 40px;
+		}
+	}
+	
+	nav {
+		margin-top: 20px;
+		.next {
+			float: right;
+		}
+	}
+}

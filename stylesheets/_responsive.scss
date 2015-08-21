@@ -1,0 +1,18 @@
+$responsive-sm: 750px;
+$responsive-md: 970px;
+$responsive-lg: 1170px;
+
+@mixin respond-to($media) {
+	@if $media == xs {
+		@media only screen and (max-width: $responsive-sm) { @content; }
+	}
+	@else if $media == sm {
+		@media only screen and (min-width: $responsive-sm + 1) and (max-width: $responsive-md) { @content; }
+	}
+	@else if $media == md {
+		@media only screen and (min-width: $responsive-md + 1) and (max-width: $responsive-lg) { @content; }
+	}
+	@else if $media == lg {
+		@media only screen and (min-width: $responsive-md + 1) { @content; }
+	}
+}

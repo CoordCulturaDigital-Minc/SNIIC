@@ -1,0 +1,30 @@
+& > header {
+	padding-top: $spacing-unit;
+	padding-bottom: $spacing-unit;
+	
+	display: flex;
+	flex-wrap: wrap;
+	
+	svg {
+		max-width: 100%;
+		align-self: center;
+	}
+	svg g * {
+		fill: $color-nil-white;
+	}
+	.title {
+			border-left: 2px solid $color-nil-white;
+		align-self: center;
+		
+		h1 {
+			text-align: center;
+			font-size: 24px;
+			
+			color: $color-nil-white;
+			small {
+				color: $color-second-gray;
+				display: block;
+			}
+		}
+	}
+}
