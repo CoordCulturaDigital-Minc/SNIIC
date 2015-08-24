@@ -1,5 +1,5 @@
 & > section {
-	h2 {
+	header h2 {
 		color: $color-heading-gray;
 		position: relative;
 		span {
@@ -29,8 +29,26 @@
 	
 	nav {
 		margin-top: 20px;
+		div {
+			max-width: 45%;
+			@include respond-to(xs) {
+				max-width: 100%;
+			}
+			h4 small {
+				display: block;
+				font-size: 12px;
+				text-transform: uppercase;
+			}
+		}
+		
+		
 		.next {
 			float: right;
+			text-align: right;
+			@include respond-to(xs) {
+				float: none;
+				text-align: left;
+			}
 		}
 	}
 	

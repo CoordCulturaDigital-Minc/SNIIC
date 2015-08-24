@@ -13,39 +13,20 @@
 		<?php the_content(); ?>
 	</div>
 	
-	<nav class="clearfix">
-			<?php
-	global $wp_query;
+	<?php
+	if ( get_previous_post_link() || get_next_post_link() ) {
+	?><nav class="clearfix"><?php
 	
-	if ( is_single() ) : ?>
+	if  ( get_next_post_link() ) :
+	?><div class="next">
+		<h4 class="entry-title"><small>Anterior</small><span><?php next_post_link( '%link', '%title' );?></span></h4></div><?php  endif;
+	if  ( get_previous_post_link() ) :
+	?><div class="previous">
+		<h4 class="entry-title"><small>Seguinte</small><span><?php previous_post_link( '%link', '%title' );?></span></h4></div><?php endif;
 	
-		<?php
-		if (function_exists('wp_pagenavi')) {
-			wp_pagenavi();
-		} else {
-			?><div class="previous"><?php previous_post_link( '%link', '<i class="fa fa-arrow-left"></i> %title' );?></div><?php 
-			?><div class="next"><?php next_post_link( '%link', '%title <i class="fa fa-arrow-right"></i>' );?></div><?php
-		} elseif ( $wp_query->max_num_pages > 1 && ( is_home() || is_archive() || is_search() ) ) :
-			if (function_exists('wp_pagenavi')) {
-				wp_pagenavi();
-			} else {
-				if ( get_next_posts_link() ) : ?>
-					<div class="previous">
-						<?php next_posts_link( __( '<i class="fa fa-arrow-left"></i> Older posts', 'simplex' ) ); ?>
-					</div><?php
-				endif;
-				
-				if ( get_previous_posts_link() ) : ?>
-					<div class="next">
-						<?php previous_posts_link( __( 'Newer posts <i class="fa fa-arrow-right"></i>', 'simplex' ) ); ?>
-					</div><?php
-				endif;
-			}
-		endif;
-
-?>
-
-	</nav>
+	?></nav><?php
+	}
+	?>
 
 	<?php comments_template( '', true ); ?>
 </article>
