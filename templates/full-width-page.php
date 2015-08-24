@@ -2,10 +2,6 @@
 /**
  * Template Name: Full-width, no sidebar
  * Description: A full-width template with no sidebar
- *
- * @package WordPress
- * @subpackage simpleX
- * @since simpleX 2.0
  */
 
 get_header(); ?>

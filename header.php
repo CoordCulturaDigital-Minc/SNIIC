@@ -1,4 +1,4 @@
-<?php require 'head.php'; ?>
+<?php require 'includes/head.php'; ?>
 
 <div class="header-wrap navigator-wrap wrap">
 	
@@ -30,6 +30,6 @@
 	</a>
 </header>
 
-<?php require 'navigator.php'; ?>
+<?php require 'includes/navigator.php'; ?>
 	
 </div>

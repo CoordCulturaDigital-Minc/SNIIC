@@ -30,7 +30,7 @@
 
 ?></title>
 
-<?php require_once 'dependencies/index.php'; ?>
+<?php require_once get_template_directory() . '/dependencies/index.php'; ?>
 
 <style>
 	body > .section-wrap {
