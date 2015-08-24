@@ -6,24 +6,12 @@
 			<span><?php the_title(); ?></span>
 			<small><time class="entry-date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ?>"><?php echo esc_html( get_the_date() ) ?></time></small>
 		</h2>
-		
-		<?php edit_post_link( __( 'Edit', 'simplex' ), '<span class="edit-link">', '</span>' ); ?>
 	</header>
 	</a>
-	
-	<?php if ( is_search() ) : ?>
 	
 	<div class="entry-summary">
 		<?php the_post_thumbnail('thumbnail');  ?>
 		<?php the_excerpt(); ?>
 	</div>
 	
-	<?php else : ?>
-	
-	<div class="entry-content">
-		<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'simplex' ) ); ?>
-		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'simplex' ), 'after' => '</div>' ) ); ?>
-	</div>
-	
-	<?php endif; ?>
 </article>
