@@ -1,13 +1,4 @@
-<?php
-/**
- * The template for displaying Category Archive pages.
- *
- * @package WordPress
- * @subpackage simpleX
- * @since simpleX 2.0
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 
 		<section id="primary">
 			<div id="content" role="main">
