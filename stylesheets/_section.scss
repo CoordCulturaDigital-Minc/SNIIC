@@ -1,12 +1,14 @@
 & > section {
 	h2 {
 		color: $color-heading-gray;
+		position: relative;
 		span {
 			padding-right: 100px;
 		}
 		small {
-			float: right;
-			padding-top: 18px;
+			position: absolute;
+			bottom: 4px;
+			right: 0;
 			font-size: 12px;
 			text-transform: uppercase;
 		}
