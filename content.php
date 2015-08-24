@@ -1,4 +1,7 @@
-<article class="col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0" id="post-<?php the_ID(); ?>">
+<article class="
+	col-sm-8 col-sm-offset-2
+	col-xs-12 col-xs-offset-0
+	" id="post-<?php the_ID(); ?>">
 	
 	<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'simplex' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
 	<header>

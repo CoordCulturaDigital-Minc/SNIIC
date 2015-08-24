@@ -14,9 +14,6 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <title><?php
-	/*
-	 * Print the <title> tag based on what is being viewed.
-	 */
 	global $page, $paged;
 
 	wp_title( '|', true, 'right' );
@@ -26,14 +23,12 @@
 
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
+	
+	if ( $site_description && ( is_home() || is_front_page() ) ) echo " | $site_description";
+	
+	if ( $paged >= 2 || $page >= 2 ) echo ' | ' . sprintf( __( 'Page %s', 'simplex' ), max( $paged, $page ) );
 
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'simplex' ), max( $paged, $page ) );
-
-	?></title>
+?></title>
 
 <?php require_once 'dependencies/index.php'; ?>
 
