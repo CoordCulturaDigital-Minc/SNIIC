@@ -1,16 +1,79 @@
 & > section {
-	header h2 {
-		color: $color-heading-gray;
-		position: relative;
-		span {
-			padding-right: 100px;
+	& > header {
+		border-bottom: 2px solid $color-heading-gray;
+		margin-top: 40px;
+		margin-bottom: 20px;
+		
+		h1 {
+			i {
+				font-size: smaller;
+				margin-right: 25px;
+				margin-bottom: 5px;
+			}
 		}
-		small {
-			position: absolute;
-			bottom: 4px;
-			right: 0;
-			font-size: 12px;
-			text-transform: uppercase;
+		form {
+			font-size: 36px;
+			font-weight: 500;
+			position: relative;
+			i {
+				position: absolute;
+				bottom: 7px;
+				left: 0;
+				font-size: smaller;
+				margin-right: 20px;
+				margin-bottom: 5px;
+			}
+			input {
+				padding-left: 54px;
+				width: 100%;
+				background: none;
+				border: none;
+				font-style: italic;
+			}
+			input:focus {
+				outline-style: none;
+			}
+			button {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				background: none;
+				border: none;
+			}
+		}
+	}
+	
+	article {
+		margin-top: 20px;
+		&:first-child {
+			margin-top: 0px;
+		}
+		&:last-child {
+			margin-bottom: 40px;
+		}
+		&.alert {
+			border: none;
+			box-shadow: none;
+			
+			p {
+				font-style: italic;
+				color: $color-second-gray;
+			}
+		}
+		header h2 {
+			color: $color-heading-gray;
+			position: relative;
+		
+			span {
+				padding-right: 100px;
+			}
+			small {
+				position: absolute;
+				bottom: 4px;
+				right: 0;
+				font-size: 12px;
+				text-transform: uppercase;
+			}
 		}
 	}
 	a {
@@ -20,11 +83,7 @@
 		}
 	}
 	article {
-		margin-top: 20px;
 		
-		&:last-child {
-			margin-bottom: 40px;
-		}
 	}
 	
 	nav {
