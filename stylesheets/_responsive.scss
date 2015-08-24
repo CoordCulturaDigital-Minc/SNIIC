@@ -1,6 +1,6 @@
-$responsive-sm: 750px;
-$responsive-md: 970px;
-$responsive-lg: 1170px;
+$responsive-sm: 768px;
+$responsive-md: 992px;
+$responsive-lg: 1200px;
 
 @mixin respond-to($media) {
 	@if $media == xs {
