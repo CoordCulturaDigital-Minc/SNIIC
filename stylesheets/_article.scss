@@ -30,11 +30,22 @@ article {
 				}
 			}
 		}
-		
-		img {
+		img, figure {
 			height: auto;
 			margin: $spacing-unit / 2 auto $spacing-unit / 4;
 			display: block;
+			
+			img {
+				width: 100%;
+				height: auto;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+			figcaption {
+				margin-top: -10px;
+				font-size: smaller;
+				line-height: 20px;
+			}
 			
 			&.alignright {
 				width: 50%;
