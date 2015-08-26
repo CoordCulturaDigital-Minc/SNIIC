@@ -38,11 +38,11 @@ article {
 			img {
 				width: 100%;
 				height: auto;
-				margin: 0 !important;
-				padding: 0 !important;
+				margin: 0;
+				padding: 0;
+				margin-bottom: $spacing-unit / 2;
 			}
 			figcaption {
-				margin-top: -10px;
 				font-size: smaller;
 				line-height: 20px;
 			}
