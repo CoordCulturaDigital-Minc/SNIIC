@@ -9,6 +9,8 @@
 			<span><?php the_title(); ?></span>
 			<small><time class="entry-date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ?>"><?php echo esc_html( get_the_date() ) ?></time></small>
 		</h2>
+		
+		<?php edit_post_link( __( 'Edit', 'simplex' ), '<span class="edit-link">', '</span>' ); ?>
 	</header>
 
 	<div class="entry-content">
