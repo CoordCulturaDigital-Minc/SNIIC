@@ -1,7 +1,8 @@
 & > section {
+	padding-top: 40px;
+	
 	& > header {
 		border-bottom: 2px solid $color-heading-gray;
-		margin-top: 40px;
 		margin-bottom: 20px;
 		
 		h1 {
@@ -43,39 +44,8 @@
 		}
 	}
 	
-	article {
-		margin-top: 20px;
-		&:first-child {
-			margin-top: 0px;
-		}
-		&:last-child {
-			margin-bottom: 40px;
-		}
-		&.alert {
-			border: none;
-			box-shadow: none;
-			
-			p {
-				font-style: italic;
-				color: $color-second-gray;
-			}
-		}
-		header h2 {
-			color: $color-heading-gray;
-			position: relative;
-		
-			span {
-				padding-right: 100px;
-			}
-			small {
-				position: absolute;
-				bottom: 4px;
-				right: 0;
-				font-size: 12px;
-				text-transform: uppercase;
-			}
-		}
-	}
+	@import 'article';
+	
 	a {
 		&:hover {
 			text-decoration: none;
@@ -109,15 +79,5 @@
 				text-align: left;
 			}
 		}
-	}
-	
-	img {
-		max-width: 90%;
-		height: auto;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		display: block;
 	}
 }
