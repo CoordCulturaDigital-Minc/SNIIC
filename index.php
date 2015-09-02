@@ -16,6 +16,20 @@
 
 	<?php endwhile; ?>
 
+<div class="
+	col-sm-8 col-sm-offset-2
+	col-xs-12 col-xs-offset-0
+	">
+	<?php
+		the_posts_pagination( array(
+			'mid_size' => 10,
+			'prev_text'          => 'Anterior',
+			'next_text'          => 'Seguinte',
+			'before_page_number' => '<span class="meta-nav screen-reader-text">' . 'Página' . ' </span>',
+		) );
+	?>
+</div>
+
 <?php else :
 	
 // 	DO SOME TEMPLATE PLACEHOLDER

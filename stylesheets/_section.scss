@@ -55,6 +55,12 @@
 	
 	nav {
 		margin-top: 20px;
+		width: 100%;
+		span {
+			&.next, &.prev {
+				display: block;
+			}
+		}
 		div {
 			max-width: 45%;
 			@include respond-to(xs) {
@@ -66,8 +72,6 @@
 				text-transform: uppercase;
 			}
 		}
-		
-		
 		.next {
 			float: right;
 			text-align: right;
@@ -76,5 +80,31 @@
 				text-align: left;
 			}
 		}
+		div.nav-links {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			max-width: 100%;
+			width: 100%;
+			.page-numbers {
+				font-size: 18px;
+				font-weight: 500;
+				line-height: 1.1;
+				text-align: center;
+				flex-grow: 1;
+				span.meta-nav {
+					display: none;
+				}
+			}
+			a.prev {
+				text-align: left;
+				flex-grow: 4;
+			}
+			a.next {
+				text-align: right;
+				flex-grow: 4;
+			}
+		}
+	}
 	}
 }
