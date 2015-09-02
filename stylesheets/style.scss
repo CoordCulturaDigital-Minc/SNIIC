@@ -26,3 +26,7 @@ body {
 		@import 'section';
 	}
 }
+
+.assistive-text, .screen-reader-text {
+	display: none;
+}

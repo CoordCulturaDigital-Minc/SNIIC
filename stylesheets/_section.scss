@@ -106,5 +106,25 @@
 			}
 		}
 	}
+	
+	.comments-area {
+		#respond {
+			form {
+				p {
+					label {
+						display: block;
+						span {
+							color: red;
+						}
+					}
+					textarea, input {
+						width: 100%;
+					}
+					textarea {
+						border-color: gray;
+					}
+				}				
+			}
+		}
 	}
 }
