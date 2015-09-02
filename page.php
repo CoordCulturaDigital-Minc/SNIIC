@@ -19,7 +19,7 @@ get_header(); ?>
 
 				<?php the_post(); ?>
 
-				<?php get_template_part( 'content', 'page' ); ?>
+				<?php get_template_part( 'content/content', 'page' ); ?>
 
 				<?php comments_template( '', true ); ?>
 
