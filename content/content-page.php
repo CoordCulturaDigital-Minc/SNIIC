@@ -1,6 +1,7 @@
 <article class="
 	col-sm-8 col-sm-offset-2
 	col-xs-12 col-xs-offset-0
+	single
 	<?php echo get_post_class(); ?>
 	" id="post-<?php the_ID(); ?>">
 
@@ -19,7 +20,7 @@
   		<?php } ?>
 	</header>
 
-	<div class="entry-content">
+	<div class="entry">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'simplex' ), 'after' => '</div>' ) ); ?>
 		<?php edit_post_link( __( 'Edit', 'simplex' ), '<span class="edit-link">', '</span>' ); ?>
