@@ -1,6 +1,8 @@
 article {
 	margin-top: $spacing-unit;
 	
+	@import 'form';
+	
 	&:first-child {
 		margin-top: 0px;
 	}
