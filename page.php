@@ -1,30 +1,14 @@
-<?php
-/**
- * The template for displaying all pages.
- *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
- *
- * @package WordPress
- * @subpackage simpleX
- * @since simpleX 2.0
- */
+<?php get_header(); ?>
 
-get_header(); ?>
-
-		<div id="primary">
-			<div id="content" role="main">
-
-				<?php the_post(); ?>
-
-				<?php get_template_part( 'content/content', 'page' ); ?>
-
-				<?php comments_template( '', true ); ?>
-
-			</div><!-- #content -->
-		</div><!-- #primary -->
+<div class="section-wrap wrap">
+<section class="row center-block">
+	<?php
+		the_post();
+		get_template_part( 'content/content', 'page' );
+		comments_template( '', true );
+	?>
+</section>
+</div>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
