@@ -8,12 +8,11 @@
 	<header>
 		<h2 class="entry-title">
 			<span><?php the_title(); ?></span>
-			<small><time class="entry-date" datetime="<?php echo esc_attr( get_the_date( 'c' ) ) ?>"><?php echo esc_html( get_the_date() ) ?></time></small>
 		</h2>
 		
 		<?php
-  			$children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
-  			if ($children) { ?>
+			#$children = wp_list_pages('title_li=&child_of='.$post->ID.'&echo=0');
+  			if (false) {#if ($children) { ?>
   				<ul class="subpage hidden">
   					<?php echo $children; ?>
   				</ul>

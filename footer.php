@@ -19,7 +19,7 @@
 				href="https://www.flickr.com/photos/ministeriodacultura/" target="_blank" title="Flickr Cultura"></a>
 		</div>
 		
-		<p class="text-center col-xs-12 col-sm-8 col-sm-offset-2">2015 &reg; Ministério da Cultura. Todos os direitos reservados.</p>
+		<p class="text-center col-xs-12 col-sm-8 col-sm-offset-2 hidden">2015 &reg; Ministério da Cultura. Todos os direitos reservados.</p>
 	</footer>
 </div>
 
