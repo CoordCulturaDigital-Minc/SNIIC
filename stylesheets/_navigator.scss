@@ -1,17 +1,16 @@
-& > nav {
+& > #navbar > nav {
 	padding-bottom: $spacing-unit;
 	
 	ul {
 		padding-left: 0;
 		
+		@include respond-to(xs) {
+			margin-left: 0;
+			width: 100%;
+			padding-right: 0px;
+		}
+		
 		li {
-			list-style: none;
-			float: left;
-			padding: 0 10px;
-			
-			&:first-child {
-				padding-left: 0px;
-			}
 			a {
 				color: $color-nil-white;
 				&:hover {
@@ -25,6 +24,7 @@
 					margin-top: 0;
 				}
 				
+				width: 100%;
 				float: none;
 				text-align: center;
 				padding: 0;
@@ -36,15 +36,12 @@
 				
 			}
 		}
-		@include respond-to(xs) {
-			margin-left: 0;
-			width: 100%;
-		}
 	}
 	
 	form {
 		display: block;
 		position: relative;
+		margin-top: 10px;
 		
 		input {
 			width: 100%;
@@ -85,3 +82,131 @@
 		}
 	}
 }
+
+/**
+ * 4.2 Navigation
+ * ----------------------------------------------------------------------------
+ */
+
+ul.nav-menu,
+div.nav-menu > ul {
+	margin: 0;
+	padding: 0 40px 0 0;
+}
+
+.nav-menu {
+
+li {
+	display: inline-block;
+	position: relative;
+	
+	&:hover, &:focus, a:hover, a:focus { color: #fff; }
+	
+	a {
+		display: block;
+		font-size: 15px;
+		line-height: 1;
+		padding: 10px 20px;
+		text-decoration: none;
+		
+		@include respond-to(xs) { padding: 5px 20px;}
+	}
+}
+
+.sub-menu,
+.children {
+	background-color: $color-brand-blue;
+	padding: 0;
+	position: absolute;
+	left: 0;
+	z-index: 99999;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	
+	ul {
+		left: 100%;
+		top: 0;
+	}
+}
+.children .children {
+	background-color: $color-second-shade-blue;
+}
+
+}
+
+ul.nav-menu,
+.nav-menu ul { ul a {
+	color: #fff;
+	margin: 0;
+	width: 200px;
+	@include respond-to(xs) { width: 100%; }
+}}
+
+ul.nav-menu ul a:hover,
+.nav-menu ul ul a:hover,
+ul.nav-menu ul a:focus,
+.nav-menu ul ul a:focus {
+	background-color: $color-dark-blue;
+}
+
+ul.nav-menu li:hover > ul,
+.nav-menu ul li:hover > ul,
+ul.nav-menu .focus > ul,
+.nav-menu .focus > ul {
+	clip: inherit;
+	overflow: inherit;
+	height: inherit;
+	width: inherit;
+}
+
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+	color: #bc360a;
+	background-color: $color-brand-blue;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+/* Navbar */
+.navbar {
+	margin: 0 auto;
+	max-width: 1600px;
+	width: 100%;
+}
+.site-header {
+	.search-form {
+		position: absolute;
+		right: 20px;
+		top: 1px;
+	}
+	
+	.search-field {
+		background-color: transparent;
+		background-image: url(images/search-icon.png);
+		background-position: 5px center;
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		cursor: pointer;
+		height: 37px;
+		margin: 3px 0;
+		padding: 0 0 0 34px;
+		position: relative;
+		-webkit-transition: width 400ms ease, background 400ms ease;
+		transition:         width 400ms ease, background 400ms ease;
+		width: 1px;
+		
+		&:focus {
+			background-color: #fff;
+			cursor: text;
+			outline: 0;
+			width: 230px;
+		}
+	}
+}
+
