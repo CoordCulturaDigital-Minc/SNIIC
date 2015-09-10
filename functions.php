@@ -11,6 +11,8 @@ function SNIIC_setup() {
 	) );
 	
 	wp_enqueue_script( 'twentythirteen-script', get_template_directory_uri() . '/js/functions.js', array( 'jquery' ), '20150330', true );
+	
+	register_nav_menu( 'primary', 'Navigation Menu' );
 }
 endif;
 
