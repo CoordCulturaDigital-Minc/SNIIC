@@ -130,6 +130,9 @@ li {
 		top: 0;
 	}
 }
+.children li { &, a {
+	width: 100%;
+}}
 .children .children {
 	background-color: $color-second-shade-blue;
 }
